@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>The Arms Room</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/paper.css">
+<style>
+	@page
+	{
+		size: letter landscape;
+	}
+
+	#disclaimer
+	{
+		color: #999;
+		float: right;
+		font-family: Lato;
+	}
+
+	#example
+	{
+		color: #666;
+		font-family: Lato;
+	}
+
+	#example a
+	{
+		color: #06C;
+		text-decoration: none;
+	}
+
+	#example a:hover
+	{
+		color: #09F;
+	}
+
+	#wrong_page
+	{
+		display: none;
+		font-family: Lato;
+		font-size: 48pt;
+		font-weight: 100;
+		margin-top: 150px;
+		text-align: center;
+	}
+
+	#wrong_page b
+	{
+		display: block;
+		margin-bottom: 200px;
+	}
+
+	@media print
+	{
+		h1, #generator
+		{
+			display: none;
+		}
+
+		#wrong_page
+		{
+			display: block;
+		}
+	}
+</style></head>
+
+<body class="letter landscape">
+
+<section class="sheet padding-20mm">
+
+	<h1>
+		Welcome to the <strong style="white-space: nowrap;">ARMS ROOM</strong>
+		<span>We hope you enjoy your stay.™</span>
+	</h1>
+
+	<div id="wrong_page">
+		<b>You printed the wrong page.</b>
+		Good job.
+	</div>
+
+	<form id="generator" action="print.php" method="post">
+
+		<textarea name="data" placeholder="Copy/paste your platoon's field MAL here, including the column headings (unmerged).
+
+The first three columns MUST be:
+  - Position
+  - Name
+  - Rack #"></textarea>
+		<br>
+		<label for="MALTYPE">MAL Type</label>
+		<select name="MALTYPE">
+			<option value="HHC">HHC</option>
+			<option value="basic">Basic</option>
+		</select> <br />
+		<input name="type" type="submit" value="DA-2062">
+		<input name="type" type="submit" value="Control Log">
+	</form>
+
+	<div id="disclaimer">
+		<b>Note:</b> if you are using Internet Explorer, your printed page may be formatted incorrectly.
+	</div>
+
+	<div id="example">
+		Not sure how to format your spreadsheet? <a href="SampleData.xls">Download this example</a>.
+	</div>
+
+</section>
+
+
+</body></html>
